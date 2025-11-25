@@ -1,0 +1,86 @@
+.receive-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+.receive-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*ให้ข้อความตรงอยู่แนวเดียวกัน*/
+
+}
+.fas.fa-search,
+.fas.fa-qrcode {
+  font-size: 18px;
+  color: #470fd4;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.icon-barcode {
+  font-family: 'Material Icons', sans-serif;
+}
+.receive-form label {
+  font-weight: bold;
+  margin-top: 14px;
+  display: block;
+  color: #333;
+}
+
+.receive-form input,
+.receive-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.product-details {
+  background: #f4f4f4;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+.product-details img {
+  max-width: 60px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.not-found {
+  color: #999;
+  font-size: 0.9rem;
+  margin: 10px 0 20px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cancel-btn,
+.save-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #e0e0e0;
+  color: #444;
+}
+
+.save-btn {
+  background-color: #6C816D;
+  color: white;
+}

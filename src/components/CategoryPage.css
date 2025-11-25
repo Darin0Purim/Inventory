@@ -1,0 +1,139 @@
+.dashboard-page {
+  padding: 20px;
+  margin-left: 240px;
+  color: #286E34;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.welcome-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.search-group {
+  display: flex;
+  align-items: center;
+  background-color: #e3d9ff;
+  padding: 6px 12px;
+  border-radius: 12px;
+  gap: 10px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+  width: 160px;
+  color: #8a6ee8;
+}
+
+.fas.fa-search {
+  font-size: 18px;
+  color: #8a6ee8;
+  cursor: pointer;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.category-card {
+  background-color: #6C816D;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.category-card p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.category-card.add-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  background-color: #dcdcdc;
+  color: gray;
+  cursor: pointer;
+}
+.add-category-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.add-category-form input {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.add-category-form button {
+  padding: 6px;
+  background-color: #8a6ee8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-category-form button:hover {
+  background-color: #6a54d8;
+}
+.menu-dots {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+}
+
+.menu-popup {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  background: white;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.menu-popup button {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.category-card {
+  position: relative;
+}
+

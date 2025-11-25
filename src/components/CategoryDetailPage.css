@@ -1,0 +1,33 @@
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.product-table th,
+.product-table td {
+  border-bottom: 1px solid #ccc;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.product-table img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 6px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: green;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.stock-summary {
+  float: right;
+  padding: 8px;
+  font-weight: bold;
+}
