@@ -3,7 +3,6 @@ const router = express.Router();
 const db = require('../db');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-
 const checkAuth = require('../middleware/checkAuth');
 
 router.get('/self', checkAuth, (req, res) => {

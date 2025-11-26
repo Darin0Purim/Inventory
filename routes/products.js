@@ -8,7 +8,7 @@ const db = require('../db');
 router.get("/", (req, res) => {
   const search = (req.query.search || "").trim();
 
-  // base SQL
+  // base SQL เลือกข้อมูลที่จะนำมาแสดง
   let sql = `
     SELECT 
       p.product_id, p.sku, p.product_name, p.size, p.quantity, p.image,
