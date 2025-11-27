@@ -1,6 +1,4 @@
 // DashboardPage.jsx
-
-
 import { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom"; 
 import "./DashboardPage.css";
@@ -8,7 +6,7 @@ import Sidebar from "./Sidebar";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
  // นำเข้าไลยราลีดาวน์โหลดไฟล์เอกสารรายงานหน้าแดชบอร์ด
-const API = import.meta.env?.VITE_API_URL || 'http://127.0.0.1:5000';
+const API = import.meta.env?.VITE_API_URL || 'http://10.113.170.168:5000';
 const BASE_URL = API;
 
 // helper แบบปลอดภัย – ถ้ามี token ค่อยใส่ header

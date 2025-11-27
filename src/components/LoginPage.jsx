@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 // 🔧 ลบ: ลบ 'Navigate' ที่ไม่ได้ใช้
 // import { Navigate } from "react-router-dom"; 
 
-// ✅ ใช้ตัวแปร API ที่กำหนดจาก .env หรือ fallback เป็น 'http://127.0.0.1:5000'
-const API = import.meta.env?.VITE_API_URL || 'http://127.0.0.1:5000';
+
+const API = import.meta.env?.VITE_API_URL || 'http://10.113.170.168:5000';
 
 
 console.log("API URL ที่กำลังใช้งาน:", API); // ⬅️ เพิ่มบรรทัดนี้เพื่อตรวจสอบ
