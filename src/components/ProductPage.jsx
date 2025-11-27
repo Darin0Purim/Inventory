@@ -69,10 +69,10 @@ export default function ProductPage() {
               aria-label="สแกนบาร์โค้ด"
             />
           </div>
+            <button className="add-btn" onClick={() => navigate("/add-product")}>
+              รับสินค้าเข้า
+            </button>
 
-          <button className="add-btn" onClick={() => navigate("/add-product")}>
-            + เพิ่มสินค้า
-          </button>
         </div>
       </div>
 

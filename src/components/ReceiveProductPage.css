@@ -1,3 +1,11 @@
+.page-layout {
+  margin-left: 240px;
+  padding: 20px;
+  min-height: 100vh;
+  background: #f5f6fa;
+  display: flex;
+  flex-direction: column;
+}
 .receive-container {
   max-width: 600px;
   margin: 40px auto;

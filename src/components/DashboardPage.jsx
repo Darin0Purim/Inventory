@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import "./DashboardPage.css";
 import Sidebar from "./Sidebar";
 import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
+import { Link } from "react-router-dom";
+
  // นำเข้าไลยราลีดาวน์โหลดไฟล์เอกสารรายงานหน้าแดชบอร์ด
 const API = import.meta.env?.VITE_API_URL || 'http://10.113.170.168:5000';
 const BASE_URL = API;
@@ -35,27 +36,27 @@ export default function DashboardPage() {
 
   // ฟังก์ชันดาวน์โหลดหน้า Dashboard
 const downloadDashboard = async () => {
-  try {
-    const dashboard = document.querySelector(".dashboard-page");
+    try {
+      const dashboard = document.querySelector(".dashboard-page");
 
-    const canvas = await html2canvas(dashboard, {
-      scale: 2,
-      useCORS: true,
-    });
+      const canvas = await html2canvas(dashboard, {
+        scale: 2,
+        useCORS: true,
+      });
+const img = canvas.toDataURL("image/png");
+      const pdf = new jsPDF("p", "mm", "a4");
 
-    const imgData = canvas.toDataURL("image/png");
-    const pdf = new window.jspdf.jsPDF("p", "mm", "a4");
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
 
-    const pdfWidth = pdf.internal.pageSize.getWidth();
-    const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+      pdf.addImage(img, "PNG", 0, 0, pdfWidth, pdfHeight);
+      pdf.save("dashboard-report.pdf");
 
-    pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-    pdf.save("dashboard-report.pdf");
+    } catch (err) {
+      console.error("ดาวน์โหลด PDF ล้มเหลว:", err);
+    }
+  };
 
-  } catch (err) {
-    console.error("ดาวน์โหลด PDF ล้มเหลว:", err);
-  }
-};
 
   // ดึง products
  const fetchProducts = useCallback(async () => {
@@ -141,13 +142,11 @@ const fetchTopCategories = useCallback(async () => {
         
       </div>
       <div className="download-row">
-        <button
-          className="download-dashboard-btn"
-          onClick={downloadDashboard}
-        >
+        <Link to="/report" className="download-link">
           ดาวน์โหลดรายงาน (PDF)
-        </button>
-</div>
+        </Link>
+      </div>
+
 
       {/* ==== สรุปยอดรวม ==== */}
       <div className="summary-boxes">
@@ -172,7 +171,13 @@ const fetchTopCategories = useCallback(async () => {
       <div className="product-card">
         {/* ==== สินค้าขายดีรายเดือน ==== */}
         <div className="section">
-          <h2>สินค้าที่ขายดีรายเดือน</h2>
+          <h2
+            className="section-link"
+            onClick={() => navigate("/top-issued")}
+          >
+            สินค้าขายดีรายเดือน
+          </h2>
+
           <div className="product-grid">
             {topIssued.length === 0 && <p>ยังไม่มีข้อมูลเดือนนี้</p>}
             {topIssued.map((it) => (
@@ -195,7 +200,13 @@ const fetchTopCategories = useCallback(async () => {
 
         {/* ==== ประเภทสินค้าขายดี ==== */}
         <div className="section">
-          <h2>ประเภทสินค้าขายดี</h2>
+         <h2
+            className="section-link"
+            onClick={() => navigate("/top-categories")}
+          >
+            ประเภทสินค้าขายดี
+          </h2>
+
           <div className="category-grid">
             {topCategories.length === 0 && <p>ยังไม่มีข้อมูลเดือนนี้</p>}
             {topCategories.map((cat) => (
@@ -216,6 +227,13 @@ const fetchTopCategories = useCallback(async () => {
 
       {/* ==== สินค้าใกล้หมด ==== */}
       <div className="low-stock">
+        <h2
+          className="section-link"
+          onClick={() => navigate("/low-stock")}
+        >
+          สินค้าใกล้หมด
+        </h2>
+
         {lowStock.map((item) => (
           <div key={item.product_id}>
             <img
@@ -236,7 +254,13 @@ const fetchTopCategories = useCallback(async () => {
       {/* ==== กิจกรรมล่าสุด ==== */}
       <div className="activity-box">
         <div className="activity-header">
-          <h2>กิจกรรมล่าสุด</h2>
+          <h2
+            className="section-link"
+            onClick={() => navigate("/activity")}
+          >
+            กิจกรรมล่าสุด
+          </h2>
+
           <p className="activity-date">อัปเดตล่าสุด 20/07/2568</p>
         </div>
         <p>รับสินค้าเข้าเพิ่ม 200</p>

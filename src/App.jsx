@@ -15,6 +15,12 @@ import StockCheckPage from "./components/StockCheckPage";
 import SettingsPage from "./components/SettingsPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ProductDetail from "./components/ProductDetail";
+import ReportPage from "./components/ReportPage";
+import ActivityPage from "./components/ActivityPage";
+import TopIssuedPage from "./components/TopIssuedPage";
+import TopCategoriesPage from "./components/TopCategoriesPage";
+import LowStockPage from "./components/LowStockPage";
+
 
 export default function App() {
   return (
@@ -35,7 +41,11 @@ export default function App() {
       <Route path="/receive" element={<ProtectedRoute><ReceiveProductPage /></ProtectedRoute>} />
       <Route path="/stock-check" element={<ProtectedRoute><StockCheckPage /></ProtectedRoute>} />
       <Route path="/settings" element={<ProtectedRoute><SettingsPage /></ProtectedRoute>} />
-
+      <Route path="/report" element={<ReportPage />} />
+      <Route path="/activity" element={<ActivityPage />} />
+      <Route path="/top-issued" element={<TopIssuedPage />} />
+      <Route path="/top-categories" element={<TopCategoriesPage />} />
+      <Route path="/low-stock" element={<LowStockPage />} />
       {/* เส้นทางไม่ตรง -> กลับหน้า login */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

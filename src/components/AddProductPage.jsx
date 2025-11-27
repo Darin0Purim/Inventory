@@ -38,8 +38,8 @@ export default function AddProduct() {
   };
 
   return (
-    <>
-      <div className="dashboard-page">
+    
+      <div className="page-layout">
         <Sidebar />
         <div className="topbar">
           <h1 className="welcome-title">รับสินค้า!</h1>
@@ -55,8 +55,7 @@ export default function AddProduct() {
             </div>
           </div>
         </div>
-      </div>
-
+      
       <form onSubmit={handleSubmit} style={{ padding: "20px" }}>
         <input name="name" value={form.name} onChange={handleChange} placeholder="ชื่อสินค้า" />
         <input name="category" value={form.category} onChange={handleChange} placeholder="หมวดหมู่" />
@@ -64,6 +63,7 @@ export default function AddProduct() {
         <input type="file" accept="image/*" onChange={handleImage} />
         <button type="submit">บันทึก</button>
       </form>
-    </>
+  </div>
+
   );
 }

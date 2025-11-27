@@ -189,19 +189,28 @@
   font-size: 13px;
   
 }
-
-.download-dashboard-btn {
-  margin-top: 12px;
-  padding: 7px 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  display: inline;
-  color: #286E34;
-}
 .download-row {
   display: flex;
-  justify-content: flex-end; /* ชิดขวา */
+  justify-content: flex-end;
   margin-top: 10px;
+}
+
+.download-link {
+  color: #6C816D;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.download-link:hover {
+  color: #6C816D;
+}
+.section-link {
+  cursor: pointer;
+  color: #6C816D;
+}
+
+.section-link:hover {
+  text-decoration: underline;
+  color: #6C816D;
 }

@@ -1,0 +1,89 @@
+.activity-page {
+  display: flex;
+  background: #f5f6fa;
+  min-height: 100vh;
+    padding: 20px;
+  margin-left: 240px;
+}
+
+.activity-content {
+  flex: 1;
+  padding: 30px 40px;
+}
+
+.activity-content h1 {
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+/* ตารางสินค้า */
+.stock-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.stock-table thead {
+  background: #e7f3ff;
+}
+
+.stock-table th,
+.stock-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #eaeaea;
+  text-align: left;
+  font-size: 15px;
+}
+
+.stock-table th {
+  font-weight: bold;
+  color: #333;
+}
+
+/* รูปสินค้า */
+.product-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* hover แถว */
+.stock-table tbody tr:hover {
+  background: #f8fbff;
+}
+/* แถวสินค้าที่ใกล้หมด (เหลือ < 30) */
+.lowstock-row {
+  background-color: #ffe5e5 !important;
+}
+
+.lowstock-row:hover {
+  background-color: #ffd6d6 !important;
+}
+.type-cell {
+  font-weight: bold;
+}
+
+.activity-row.in {
+  background-color: #e8ffe8; /* เขียวอ่อน เติมเข้า */
+}
+
+.activity-row.out {
+  background-color: #ffecec; /* แดงอ่อน เบิกออก */
+}
+
+.activity-row.damaged {
+  background-color: #fff4d6; /* เหลืองอ่อน เสียหาย */
+}
+
+.activity-row:hover {
+  background-color: #eef5ff;
+}
+
+.change-qty {
+  font-weight: bold;
+}
