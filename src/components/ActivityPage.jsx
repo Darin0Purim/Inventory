@@ -59,7 +59,7 @@ export default function TopIssuedPage() {
               <th>ชื่อสินค้า</th>
               <th>รหัสสินค้า</th>
               <th>จำนวน</th>
-              <th>คงเหมือใหม่</th>
+              <th>คงเหลือใหม่</th>
               <th>แอดมิน</th>
               <th>เวลา</th>
             </tr>
